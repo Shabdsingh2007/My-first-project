@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae & Portfolio | Studente 5° Anno Informatica</title>
+    <meta name="description" content="CV e Portfolio di uno studente al 5° anno di scuola superiore con competenze in C++, Java, HTML5, CSS3 e JavaScript.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Foglio di stile principale -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barra di avanzamento lettura in alto -->
+    <div id="scroll-progress" class="scroll-progress"></div>
+
+    <!-- Header & Navigazione -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="#hero" class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">DevStudent</span>
+                <span class="logo-slash">/</span>
+                <span class="logo-bracket">&gt;</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">Chi Sono</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Competenze</a></li>
+                    <li class="nav-item"><a href="#education" class="nav-link">Percorso</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Progetti</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contatti</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Selettore Tema Chiaro/Scuro -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema chiaro/scuro" title="Cambia tema">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                
+                <!-- Pulsante Contattami Rapido (Desktop) -->
+                <a href="#contact" class="btn btn-sm btn-primary d-none-mobile">
+                    <span>Parliamo</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <!-- Hamburger Menu Mobile -->
+                <button class="hamburger" id="hamburger" aria-label="Apri menu di navigazione">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sezione Hero -->
+        <section class="hero section" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge-status">
+                        <span class="pulse-dot"></span>
+                        <!-- MODIFICA QUI: puoi cambiare lo stato attuale -->
+                        <span>5° Anno Superiore &bull; In preparazione per la Maturità</span>
+                    </div>
+                    
+                    <!-- MODIFICA QUI: Inserisci il tuo nome e cognome -->
+                    <h1 class="hero-title">
+                        Ciao, sono <span class="gradient-text">Il Tuo Nome</span>
+                    </h1>
+                    
+                    <h2 class="hero-subtitle">
+                        Aspirante <span class="typing-text" id="typing-text">Sviluppatore Software</span>
+                    </h2>
+
+                    <!-- MODIFICA QUI: Breve presentazione iniziale -->
+                    <p class="hero-description">
+                        Ho iniziato il 5° anno ad indirizzo informatico. Sono appassionato di programmazione, 
+                        sviluppo logico e creazione di soluzioni software. Lavoro principalmente con 
+                        <strong>C++</strong>, <strong>Java</strong> e tecnologie web come 
+                        <strong>HTML5</strong>, <strong>CSS3</strong> e <strong>JavaScript</strong>.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <span>I Miei Progetti</span>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Contattami</span>
+                        </a>
+                        <button class="btn btn-ghost" id="print-cv-btn" title="Stampa o Salva in PDF">
+                            <i class="fa-solid fa-print"></i>
+                            <span>Stampa / PDF</span>
+                        </button>
+                    </div>
+
+                    <!-- Indicatori rapidi delle tecnologie -->
+                    <div class="hero-tech-stack">
+                        <span class="tech-stack-title">Linguaggi principali:</span>
+                        <div class="tech-icons">
+                            <span class="tech-badge" title="C++"><i class="fa-solid fa-code"></i> C++</span>
+                            <span class="tech-badge" title="Java"><i class="fa-brands fa-java"></i> Java</span>
+                            <span class="tech-badge" title="HTML5"><i class="fa-brands fa-html5"></i> HTML5</span>
+                            <span class="tech-badge" title="CSS3"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                            <span class="tech-badge" title="JavaScript"><i class="fa-brands fa-js"></i> JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="profile-card-wrapper">
+                        <!-- Scheda profilo interattiva stile terminale/codice -->
+                        <div class="code-card">
+                            <div class="code-card-header">
+                                <div class="window-controls">
+                                    <span class="control close"></span>
+                                    <span class="control minimize"></span>
+                                    <span class="control maximize"></span>
+                                </div>
+                                <span class="file-name"><i class="fa-solid fa-file-code"></i> developer.cpp</span>
+                            </div>
+                            <div class="code-card-body">
+                                <pre><code><span class="code-keyword">#include</span> <span class="code-string">&lt;iostream&gt;</span>
+<span class="code-keyword">#include</span> <span class="code-string">&lt;vector&gt;</span>
+
+<span class="code-keyword">class</span> <span class="code-class">DevStudent</span> {
+<span class="code-keyword">public:</span>
+    <span class="code-type">int</span> anno = <span class="code-number">5</span>;
+    <span class="code-type">std::string</span> focus = <span class="code-string">"Coding"</span>;
+    <span class="code-type">std::vector</span>&lt;<span class="code-type">std::string</span>&gt; skills = {
+        <span class="code-string">"C++"</span>, <span class="code-string">"Java"</span>, 
+        <span class="code-string">"HTML"</span>, <span class="code-string">"CSS"</span>, <span class="code-string">"JS"</span>
+    };
+
+    <span class="code-type">void</span> <span class="code-func">obiettivi</span>() {
+        <span class="code-type">std::cout</span> &lt;&lt; <span class="code-string">"Maturità 2026!"</span>;
+        <span class="code-type">std::cout</span> &lt;&lt; <span class="code-string">"Nuove sfide..."</span>;
+    }
+};</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Card Fluttuanti Statistiche -->
+                        <div class="floating-badge badge-1">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <div>
+                                <strong>5° Anno</strong>
+                                <span>Ultimo anno superiori</span>
+                            </div>
+                        </div>
+
+                        <div class="floating-badge badge-2">
+                            <i class="fa-solid fa-fire"></i>
+                            <div>
+                                <strong>5+ Linguaggi</strong>
+                                <span>Software & Web</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#about" class="scroll-down" aria-label="Scorri in basso">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <!-- Sezione Chi Sono -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="section-subtitle">Presentazione</span>
+                    <h2 class="section-title">Chi Sono & Cosa Faccio</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card profile-summary">
+                        <div class="avatar-box">
+                            <i class="fa-solid fa-user-astronaut avatar-icon"></i>
+                        </div>
+                        <h3>Passione per la tecnologia fin dal primo codice</h3>
+                        <p>
+                            Frequento l'ultimo anno di scuola superiore ad indirizzo informatico. In questi anni di studi 
+                            ho sviluppato una forte inclinazione verso la <strong>risoluzione logica dei problemi</strong> 
+                            e l'architettura del software.
+                        </p>
+                        <p>
+                            Dalla programmazione strutturata e orientata agli oggetti con <strong>C++ e Java</strong>, 
+                            fino alla creazione di interfacce interattive con <strong>HTML, CSS e JavaScript</strong>, 
+                            mi piace comprendere a fondo sia la logica di basso livello che l'esperienza utente nel browser.
+                        </p>
+
+                        <div class="info-list">
+                            <div class="info-item">
+                                <span class="info-label"><i class="fa-solid fa-location-dot"></i> Città:</span>
+                                <!-- MODIFICA QUI: La tua città -->
+                                <span class="info-value">Italia (Disponibile anche da remoto)</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label"><i class="fa-solid fa-envelope"></i> Email:</span>
+                                <!-- MODIFICA QUI: La tua email -->
+                                <span class="info-value">tuaemail@esempio.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label"><i class="fa-solid fa-school"></i> Anno di corso:</span>
+                                <span class="info-value">5° Anno (Maturità in vista)</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label"><i class="fa-solid fa-circle-check"></i> Disponibilità:</span>
+                                <span class="info-value text-success">Stage / Tirocini / Progetti</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-highlights">
+                        <div class="highlight-box">
+                            <div class="highlight-icon">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Pensiero Computazionale & Algoritmi</h4>
+                                <p>Studio di strutture dati fondamentali (array, liste, pile, code) e complessità computazionale in C++.</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-box">
+                            <div class="highlight-icon">
+                                <i class="fa-solid fa-cubes"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Programmazione a Oggetti (OOP)</h4>
+                                <p>Ereditarietà, polimorfismo, incapsulamento e modularità implementati nei progetti scolastici in Java e C++.</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-box">
+                            <div class="highlight-icon">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Sviluppo Web Moderno</h4>
+                                <p>Pagine web semantiche, layout responsive mobile-first con CSS Grid/Flexbox e DOM manipulation in Vanilla JS.</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-box">
+                            <div class="highlight-icon">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Lavoro di Squadra & Curiosità</h4>
+                                <p>Abituato a collaborare in progetti di gruppo, utilizzo di Git per il versioning e continuo apprendimento autodidatta.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Competenze (Skills) -->
+        <section class="skills section bg-alt" id="skills">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="section-subtitle">Bagaglio Tecnico</span>
+                    <h2 class="section-title">Le Mie Competenze</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-desc">Le tecnologie e i linguaggi che ho studiato a scuola e approfondito con progetti pratici.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Card C++ -->
+                    <div class="skill-card">
+                        <div class="skill-card-top">
+                            <div class="skill-icon cpp-icon">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h3>C++</h3>
+                                <span class="skill-level">Avanzato a scuola</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+                            Programmazione ad oggetti, puntatori e gestione manuale della memoria, file I/O, funzioni ricorsive, algoritmi di ricerca e ordinamento.
+                        </p>
+                        <div class="skill-tags">
+                            <span>OOP</span>
+                            <span>Puntatori</span>
+                            <span>Strutture Dati</span>
+                            <span>File Stream</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card Java -->
+                    <div class="skill-card">
+                        <div class="skill-card-top">
+                            <div class="skill-icon java-icon">
+                                <i class="fa-brands fa-java"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h3>Java</h3>
+                                <span class="skill-level">Intermedio / OOP</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+                            Classi e oggetti, gerarchie di ereditarietà, interfacce, gestione eccezioni, collezioni (ArrayList, HashMap) e interfacce grafiche semplici.
+                        </p>
+                        <div class="skill-tags">
+                            <span>Java Core</span>
+                            <span>Collections</span>
+                            <span>Ereditarietà</span>
+                            <span>Exceptions</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card HTML5 -->
+                    <div class="skill-card">
+                        <div class="skill-card-top">
+                            <div class="skill-icon html-icon">
+                                <i class="fa-brands fa-html5"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h3>HTML5</h3>
+                                <span class="skill-level">Solido / Semantico</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+                            Tag semantici moderni, accessibilità di base (a11y), form strutturati, integrazione multimediale e buone pratiche SEO e web standards.
+                        </p>
+                        <div class="skill-tags">
+                            <span>Semantica</span>
+                            <span>Form & Validazione</span>
+                            <span>Accessibilità</span>
+                            <span>Web Standard</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card CSS3 -->
+                    <div class="skill-card">
+                        <div class="skill-card-top">
+                            <div class="skill-icon css-icon">
+                                <i class="fa-brands fa-css3-alt"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h3>CSS3</h3>
+                                <span class="skill-level">Responsive Design</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+                            Flexbox, CSS Grid, media queries per layout responsive mobile-first, transizioni, animazioni keyframe e variabili CSS (Custom Properties).
+                        </p>
+                        <div class="skill-tags">
+                            <span>Flexbox</span>
+                            <span>CSS Grid</span>
+                            <span>Mobile First</span>
+                            <span>Animazioni</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card JavaScript -->
+                    <div class="skill-card">
+                        <div class="skill-card-top">
+                            <div class="skill-icon js-icon">
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h3>JavaScript (ES6+)</h3>
+                                <span class="skill-level">Interattività Web</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+                            Manipolazione del DOM, gestione eventi, arrow functions, template literals, async/await, Fetch API per chiamate a JSON/REST API e LocalStorage.
+                        </p>
+                        <div class="skill-tags">
+                            <span>DOM Manipulation</span>
+                            <span>Event Listener</span>
+                            <span>ES6+</span>
+                            <span>Fetch API</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" style="width: 75%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card Strumenti & Extra -->
+                    <div class="skill-card">
+                        <div class="skill-card-top">
+                            <div class="skill-icon tools-icon">
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h3>Strumenti & Tool</h3>
+                                <span class="skill-level">Ambiente di Lavoro</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+                            Git e GitHub per il versioning del codice, VS Code come editor principale, terminale (Bash/PowerShell), compilatori GCC/G++ e JDK.
+                        </p>
+                        <div class="skill-tags">
+                            <span>Git & GitHub</span>
+                            <span>VS Code</span>
+                            <span>Terminal / CLI</span>
+                            <span>Debugging</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Percorso Scolastico / Formazione -->
+        <section class="education section" id="education">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="section-subtitle">La Mia Storia</span>
+                    <h2 class="section-title">Formazione & Traguardi</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="timeline">
+                    <!-- Tappa 1: 5° Anno Attuale -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Anno Scolastico In Corso (5° Anno)</div>
+                            <!-- MODIFICA QUI: Nome del tuo istituto/scuola -->
+                            <h3 class="timeline-title">Istituto Tecnico / Scuola Superiore - Indirizzo Informatico</h3>
+                            <p class="timeline-text">
+                                Attualmente frequento il quinto ed ultimo anno. Gli studi sono focalizzati sull'approfondimento 
+                                dell'architettura software, sicurezza informatica, basi di dati, sviluppo client/server 
+                                e preparazione alla prova d'esame di Stato (Maturità).
+                            </p>
+                            <div class="timeline-badges">
+                                <span class="t-badge">Informatica Avanzata</span>
+                                <span class="t-badge">Sistemi e Reti</span>
+                                <span class="t-badge">TPSIT</span>
+                                <span class="t-badge">Maturità 2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tappa 2: 3° e 4° Anno -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Triennio Superiore (3° e 4° Anno)</div>
+                            <h3 class="timeline-title">Fondamenti di Programmazione & Sviluppo Web</h3>
+                            <p class="timeline-text">
+                                Apprendimento intensivo della logica computazionale con C++ (puntatori, algoritmi, strutture dati) 
+                                e transizione verso il paradigma a oggetti con Java. Primi progetti web completi con HTML, CSS e JavaScript.
+                            </p>
+                            <div class="timeline-badges">
+                                <span class="t-badge">C++ OOP</span>
+                                <span class="t-badge">Java Standard</span>
+                                <span class="t-badge">HTML5 / CSS3</span>
+                                <span class="t-badge">JavaScript DOM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tappa 3: PCTO / Stage Scolastico -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Esperienze PCTO / Alternanza Scuola-Lavoro</div>
+                            <!-- MODIFICA QUI: Inserisci la tua esperienza di PCTO se presente -->
+                            <h3 class="timeline-title">Percorsi per le Competenze Trasversali e per l'Orientamento</h3>
+                            <p class="timeline-text">
+                                Attività pratiche sul campo e laboratori tecnici, sviluppo di capacità nel problem solving reale, 
+                                rispetto delle scadenze e comunicazione efficace all'interno di un team di lavoro.
+                            </p>
+                            <div class="timeline-badges">
+                                <span class="t-badge">Teamwork</span>
+                                <span class="t-badge">Problem Solving</span>
+                                <span class="t-badge">Soft Skills</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Progetti -->
+        <section class="projects section bg-alt" id="projects">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="section-subtitle">Portfolio</span>
+                    <h2 class="section-title">Progetti Realizzati</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-desc">Una selezione di progetti scolastici e personali sviluppati per mettere in pratica le competenze acquisite.</p>
+                </div>
+
+                <!-- Pulsanti Filtro Categorie -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">Tutti i Progetti</button>
+                    <button class="filter-btn" data-filter="cpp">C++</button>
+                    <button class="filter-btn" data-filter="java">Java</button>
+                    <button class="filter-btn" data-filter="web">Web (HTML/CSS/JS)</button>
+                </div>
+
+                <!-- Griglia Card Progetti -->
+                <div class="projects-grid" id="projects-grid">
+                    
+                    <!-- Progetto 1: C++ -->
+                    <div class="project-card" data-category="cpp">
+                        <div class="project-img-wrapper">
+                            <div class="code-preview-banner cpp-banner">
+                                <i class="fa-solid fa-terminal"></i>
+                                <span>C++ CLI Project</span>
+                            </div>
+                            <span class="project-category-badge">C++</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Sistema Gestionale Scolastico in C++</h3>
+                            <p class="project-desc">
+                                Applicazione a riga di comando per la gestione di studenti, voti e materie. 
+                                Utilizza classi orientate agli oggetti, vettori dinamici, algoritmi di calcolo media e persistenza su file di testo.
+                            </p>
+                            <div class="project-tech">
+                                <span>C++17</span>
+                                <span>OOP</span>
+                                <span>File I/O (fstream)</span>
+                                <span>Vector</span>
+                            </div>
+                            <div class="project-links">
+                                <!-- MODIFICA QUI: link al tuo repository GitHub se disponibile -->
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>Vedi Codice</span>
+                                </a>
+                                <button class="btn btn-sm btn-ghost open-modal-btn" data-project="1">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Dettagli</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progetto 2: Java -->
+                    <div class="project-card" data-category="java">
+                        <div class="project-img-wrapper">
+                            <div class="code-preview-banner java-banner">
+                                <i class="fa-brands fa-java"></i>
+                                <span>Java Application</span>
+                            </div>
+                            <span class="project-category-badge">Java</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Simulatore di Negozio / Magazzino</h3>
+                            <p class="project-desc">
+                                Programma Java con architettura a classi modulari (Prodotti, Clienti, Cassa, Inventario). 
+                                Implementa incapsulamento rigoroso, gestione delle eccezioni e menu interattivo.
+                            </p>
+                            <div class="project-tech">
+                                <span>Java JDK</span>
+                                <span>OOP (Classi & Interfacce)</span>
+                                <span>Exceptions</span>
+                                <span>Collections</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>Vedi Codice</span>
+                                </a>
+                                <button class="btn btn-sm btn-ghost open-modal-btn" data-project="2">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Dettagli</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progetto 3: Web (HTML, CSS, JS) -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-img-wrapper">
+                            <div class="code-preview-banner web-banner">
+                                <i class="fa-solid fa-laptop-code"></i>
+                                <span>Web App & UI</span>
+                            </div>
+                            <span class="project-category-badge">Web Dev</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Sito Web Personale & Portfolio CV</h3>
+                            <p class="project-desc">
+                                Questo stesso sito web! Costruito interamente da zero con HTML5 semantico, CSS3 moderno 
+                                responsive e JavaScript ES6. Include cambio tema scuro/chiaro e filtri dinamici.
+                            </p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3 Custom Vars</span>
+                                <span>JavaScript ES6</span>
+                                <span>Responsive</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>Vedi Codice</span>
+                                </a>
+                                <button class="btn btn-sm btn-ghost open-modal-btn" data-project="3">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Dettagli</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progetto 4: Web (JavaScript Interattivo) -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-img-wrapper">
+                            <div class="code-preview-banner js-banner">
+                                <i class="fa-brands fa-js"></i>
+                                <span>JavaScript App</span>
+                            </div>
+                            <span class="project-category-badge">JavaScript</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Task Manager con LocalStorage</h3>
+                            <p class="project-desc">
+                                Applicazione web interattiva per la gestione dei compiti scolastici e scadenze. 
+                                Supporta filtri per priorità, salvataggio permanente nel browser tramite LocalStorage e animazioni fluide.
+                            </p>
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>LocalStorage</span>
+                                <span>DOM Events</span>
+                                <span>CSS Flexbox</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>Vedi Codice</span>
+                                </a>
+                                <button class="btn btn-sm btn-ghost open-modal-btn" data-project="4">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Dettagli</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progetto 5: C++ Algoritmi -->
+                    <div class="project-card" data-category="cpp">
+                        <div class="project-img-wrapper">
+                            <div class="code-preview-banner algo-banner">
+                                <i class="fa-solid fa-network-wired"></i>
+                                <span>Algoritmi & Logica</span>
+                            </div>
+                            <span class="project-category-badge">C++</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Benchmark di Algoritmi di Ordinamento</h3>
+                            <p class="project-desc">
+                                Progetto di laboratorio che confronta tempi di esecuzione e complessità computazionale 
+                                tra Bubble Sort, Selection Sort, Insertion Sort e QuickSort su array di grandi dimensioni.
+                            </p>
+                            <div class="project-tech">
+                                <span>C++</span>
+                                <span>QuickSort</span>
+                                <span>Complessità O(n)</span>
+                                <span>Chrono Library</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>Vedi Codice</span>
+                                </a>
+                                <button class="btn btn-sm btn-ghost open-modal-btn" data-project="5">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Dettagli</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progetto 6: Java -->
+                    <div class="project-card" data-category="java">
+                        <div class="project-img-wrapper">
+                            <div class="code-preview-banner java2-banner">
+                                <i class="fa-solid fa-gamepad"></i>
+                                <span>Java Game Logic</span>
+                            </div>
+                            <span class="project-category-badge">Java</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Gioco Trivia Quiz Multilingua</h3>
+                            <p class="project-desc">
+                                Gioco di domande e risposte a punteggio, con lettura delle domande da file esterno, 
+                                calcolo delle statistiche del giocatore, timer per risposta e classifica finale.
+                            </p>
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>File Scanner</span>
+                                <span>Logica di Gioco</span>
+                                <span>Classi Astratte</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>Vedi Codice</span>
+                                </a>
+                                <button class="btn btn-sm btn-ghost open-modal-btn" data-project="6">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Dettagli</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Contatti -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="section-subtitle">Mettiamoci in Contatto</span>
+                    <h2 class="section-title">Scrivimi un Messaggio</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-desc">Sei un'azienda, un recruiter o vuoi semplicemente scambiare due chiacchiere su tecnologia e programmazione? Sono sempre aperto a nuove opportunità!</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Info Contatto & Canali Social -->
+                    <div class="contact-info-panel">
+                        <h3>Informazioni di Contatto</h3>
+                        <p>
+                            Puoi contattarmi direttamente tramite email o attraverso i miei canali professionali. Rispondo con piacere ed entusiasmo!
+                        </p>
+
+                        <div class="contact-methods">
+                            <!-- MODIFICA QUI: i tuoi dati personali -->
+                            <div class="method-item">
+                                <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <span class="method-title">Email Personale</span>
+                                    <a href="mailto:tuaemail@esempio.com" class="method-link">tuaemail@esempio.com</a>
+                                </div>
+                            </div>
+
+                            <div class="method-item">
+                                <div class="method-icon"><i class="fa-brands fa-github"></i></div>
+                                <div>
+                                    <span class="method-title">Profilo GitHub</span>
+                                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="method-link">github.com/tuo-username</a>
+                                </div>
+                            </div>
+
+                            <div class="method-item">
+                                <div class="method-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                                <div>
+                                    <span class="method-title">Profilo LinkedIn</span>
+                                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="method-link">linkedin.com/in/tuo-profilo</a>
+                                </div>
+                            </div>
+
+                            <div class="method-item">
+                                <div class="method-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <div>
+                                    <span class="method-title">Stato Attuale</span>
+                                    <span class="method-link">Studente 5° Anno Superiore</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card Scarica CV Rapido -->
+                        <div class="cv-download-card">
+                            <i class="fa-solid fa-file-pdf pdf-big-icon"></i>
+                            <div>
+                                <h4>Curriculum Vitae</h4>
+                                <p>Salva questa pagina come PDF o stampa la versione compatta del CV.</p>
+                                <button class="btn btn-sm btn-primary" onclick="window.print()">
+                                    <i class="fa-solid fa-download"></i> Scarica / Stampa CV
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modulo di Contatto Funzionante -->
+                    <div class="contact-form-panel">
+                        <form id="contact-form" class="contact-form" action="https://formsubmit.co/tuaemail@esempio.com" method="POST">
+                            <!-- Campi di configurazione FormSubmit -->
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_subject" value="Nuovo messaggio dal tuo Portfolio CV!">
+                            <input type="hidden" name="_template" value="table">
+
+                            <div class="form-group">
+                                <label for="sender-name">Il tuo Nome <span class="req">*</span></label>
+                                <div class="input-icon-wrap">
+                                    <i class="fa-solid fa-user"></i>
+                                    <input type="text" id="sender-name" name="name" placeholder="Mario Rossi" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sender-email">Il tuo Indirizzo Email <span class="req">*</span></label>
+                                <div class="input-icon-wrap">
+                                    <i class="fa-solid fa-at"></i>
+                                    <input type="email" id="sender-email" name="email" placeholder="mario.rossi@azienda.it/@gmail.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sender-subject">Oggetto del messaggio <span class="req">*</span></label>
+                                <div class="input-icon-wrap">
+                                    <i class="fa-solid fa-tag"></i>
+                                    <input type="text" id="sender-subject" name="subject" placeholder="Progetto / Collaborazione" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sender-message">Messaggio <span class="req">*</span></label>
+                                <div class="input-icon-wrap textarea-wrap">
+                                    <i class="fa-solid fa-message"></i>
+                                    <textarea id="sender-message" name="message" rows="5" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Invia Messaggio</span>
+                            </button>
+
+                            <div style="text-align: center; margin-top: 0.25rem;">
+                                <a href="mailto:tuaemail@esempio.com" class="btn btn-sm btn-ghost btn-block" style="font-size: 0.85rem; border: 1px dashed var(--border-color);">
+                                    <i class="fa-solid fa-envelope-open-text"></i>
+                                    <span>Oppure clicca qui per aprire direttamente Gmail</span>
+                                </a>
+                            </div>
+
+                            <!-- Messaggio di feedback invio -->
+                            <div class="form-alert d-none" id="form-alert"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="#hero" class="logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">DevStudent</span>
+                    <span class="logo-slash">/</span>
+                    <span class="logo-bracket">&gt;</span>
+                </a>
+                <p class="footer-tagline">
+                    Curriculum Vitae & Portfolio &bull; 5° Anno Indirizzo Informatico
+                </p>
+            </div>
+
+            <div class="footer-center">
+                <p>&copy; <span id="current-year">2026</span> Tutti i diritti riservati. Realizzato con HTML5, CSS3 & JavaScript.</p>
+            </div>
+
+            <div class="footer-right">
+                <a href="#hero" class="back-to-top" id="back-to-top" aria-label="Torna in cima">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modale Dettagli Progetto -->
+    <div class="modal-overlay" id="project-modal" aria-hidden="true">
+        <div class="modal-box">
+            <button class="modal-close" id="modal-close" aria-label="Chiudi finestra">&times;</button>
+            <div class="modal-body" id="modal-content">
+                <!-- Contenuto iniettato dinamicamente da script.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JavaScript principale -->
+    <script src="script.js"></script>
+</body>
+</html>
